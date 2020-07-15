@@ -1,6 +1,6 @@
-# Procedurally generated side-scroller Adventure game
+# Geochase
 
-Procedurally generated adventure game.  
+Procedurally generated side-scroller Adventure game built in react
 
 ## Usage
 dev env
