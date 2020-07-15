@@ -1,14 +1,14 @@
 import React from 'react';
-import { Box, Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core';
+import { Box, Button, makeStyles } from '@material-ui/core';
 
 
 const useStyles = makeStyles(() => ({
   randomClassName: {
-    color: 'red',
+    color: 'green',
     display:'flex',
     flexDirection:'column',
-    alignItems:'center'
+    alignItems:'center',
+    alignContent:'center',
   }
 }));
 
@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
   const classes = useStyles();
   return (
       <Box className={classes.randomClassName}>
-        Side Scroller
+        Geochase
         <Box>
           <Button onClick={()=>setGameVisible(true)}>
             Start
