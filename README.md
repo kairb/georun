@@ -25,3 +25,7 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Log
+[14/07/2020 - 1 hour] Initial setup
+[15/07/2020 - 1 hour] Score counter component and incremental tick
