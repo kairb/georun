@@ -8,7 +8,6 @@ const Game = () => {
     setInterval(() =>{
       setScore(score => score + 1)
     },interval)
-    console.log(score)
     return (()=> clearInterval(interval))
   },[])
   return(
