@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/georun/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/georun/static/js/main.f417793c.chunk.js",
-    "main.js.map": "/georun/static/js/main.f417793c.chunk.js.map",
+    "main.js": "/georun/static/js/main.93429e0f.chunk.js",
+    "main.js.map": "/georun/static/js/main.93429e0f.chunk.js.map",
     "runtime-main.js": "/georun/static/js/runtime-main.04f3aa9c.js",
     "runtime-main.js.map": "/georun/static/js/runtime-main.04f3aa9c.js.map",
     "static/js/2.4c12d4f0.chunk.js": "/georun/static/js/2.4c12d4f0.chunk.js",
     "static/js/2.4c12d4f0.chunk.js.map": "/georun/static/js/2.4c12d4f0.chunk.js.map",
     "index.html": "/georun/index.html",
-    "precache-manifest.e36b10c514ce7c2cd996e560927359f5.js": "/georun/precache-manifest.e36b10c514ce7c2cd996e560927359f5.js",
+    "precache-manifest.97ba62197da657366b6eb94f76c70228.js": "/georun/precache-manifest.97ba62197da657366b6eb94f76c70228.js",
     "service-worker.js": "/georun/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/georun/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.4c12d4f0.chunk.js.LICENSE.txt": "/georun/static/js/2.4c12d4f0.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.04f3aa9c.js",
     "static/js/2.4c12d4f0.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.f417793c.chunk.js"
+    "static/js/main.93429e0f.chunk.js"
   ]
 }

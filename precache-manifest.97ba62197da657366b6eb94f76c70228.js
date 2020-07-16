@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d98e6260b5cc486e844d801b1597a2b5",
+    "revision": "8626799184520454857d07e3856adf47",
     "url": "/georun/index.html"
   },
   {
-    "revision": "25e4ac35d2c6199ef689",
+    "revision": "8a1ddd4a06bb254e3296",
     "url": "/georun/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/georun/static/js/2.4c12d4f0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "25e4ac35d2c6199ef689",
-    "url": "/georun/static/js/main.f417793c.chunk.js"
+    "revision": "8a1ddd4a06bb254e3296",
+    "url": "/georun/static/js/main.93429e0f.chunk.js"
   },
   {
     "revision": "ad249671636adba3ba9d",
