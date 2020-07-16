@@ -1,7 +1,7 @@
 {
   "name": "side-scroller",
   "version": "0.1.0",
-  "homepage": "http://kairb.github.io/geochase",
+  "homepage": "http://kairb.github.io/georun",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
