@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Button, makeStyles } from '@material-ui/core';
 
-
 const useStyles = makeStyles(() => ({
   randomClassName: {
     color: 'green',
@@ -9,7 +8,8 @@ const useStyles = makeStyles(() => ({
     flexDirection:'column',
     alignItems:'center',
     alignContent:'center',
-  }
+    fontSize:'50px',
+  },
 }));
 
 
@@ -17,14 +17,16 @@ const useStyles = makeStyles(() => ({
  const Menu = ({setGameVisible}) => {
   const classes = useStyles();
   return (
+    <div>
       <Box className={classes.randomClassName}>
-        Geochase
+        Georun
         <Box>
           <Button onClick={()=>setGameVisible(true)}>
             Start
           </Button>
         </Box>
       </Box>
+    </div>
   );
 }
 

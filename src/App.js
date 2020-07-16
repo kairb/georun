@@ -10,7 +10,8 @@ const useStyles = makeStyles(() => ({
     alignItems:'center',
     alignContent:'center',
     justifyContent:'center',
-    height:'100vh'
+    height:'100vh',
+    maxWidth:'100vw'
   }
       
 }));
@@ -20,7 +21,7 @@ const useStyles = makeStyles(() => ({
    const [gameVisibile, setGameVisible] = useState(false);
   return (
     <div className={classes.fullViewPortContainer}>
-      {(gameVisibile)? <Game />: <Menu setGameVisible={setGameVisible} />}
+      {(gameVisibile)? <Game setGameVisible={setGameVisible} />: <Menu setGameVisible={setGameVisible} />}
     </div>
   );
 }

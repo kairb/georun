@@ -1,7 +1,28 @@
 import React, {useState, useEffect} from 'react';
 import Score from '../Score'
+import {makeStyles, Button} from '@material-ui/core';
 
-const Game = () => {
+const useStyles = makeStyles(() => ({
+  top:{
+    position:'absolute',
+    top:'0px',
+  },
+  right:{ 
+    right:'0px',
+    padding:'5px'
+  },
+  left:{
+    left:'0px',
+    padding:'5px'
+  },
+  button:{
+    color:'white',
+    backgroundColor:'green',
+  }
+}));
+
+const Game = ({setGameVisible}) => {
+  const classes = useStyles();
   const [score, setScore] = useState(0);
   const interval = 1000;
   useEffect(() => {
@@ -12,9 +33,14 @@ const Game = () => {
   },[])
   return(
     <div>
-      Game
-      <Score score ={score}/>
+      <div className={`${classes.top} ${classes.left}`}>
+        <Button className={classes.button} onClick={()=> setGameVisible(false)}>menu</Button>
+      </div>
+      <div className={`${classes.top} ${classes.right}`}>
+        <Score score ={score}/>
+      </div>
     </div>
+    
   )
 }
 
