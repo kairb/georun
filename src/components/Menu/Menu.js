@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
       <Box className={classes.randomClassName}>
         Georun
         <Box>
-          <Button onClick={()=>setGameVisible(true)}>
+          <Button color="primary" onClick={()=>setGameVisible(true)}>
             Start
           </Button>
         </Box>

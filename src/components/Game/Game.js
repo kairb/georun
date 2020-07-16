@@ -14,10 +14,6 @@ const useStyles = makeStyles(() => ({
   left:{
     left:'0px',
     padding:'5px'
-  },
-  button:{
-    color:'white',
-    backgroundColor:'green',
   }
 }));
 
@@ -34,7 +30,7 @@ const Game = ({setGameVisible}) => {
   return(
     <div>
       <div className={`${classes.top} ${classes.left}`}>
-        <Button className={classes.button} onClick={()=> setGameVisible(false)}>menu</Button>
+        <Button color='primary' onClick={()=> setGameVisible(false)}>menu</Button>
       </div>
       <div className={`${classes.top} ${classes.right}`}>
         <Score score ={score}/>

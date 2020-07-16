@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import Menu from './components/Menu';
 import Game from './components/Game';
-import { makeStyles } from '@material-ui/core';
-
+import { makeStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   fullViewPortContainer: {
@@ -16,13 +15,23 @@ const useStyles = makeStyles(() => ({
       
 }));
 
+
+const theme = createMuiTheme(() => ({
+  palette:{
+    primary:'green',
+    secondary:'white',
+  }
+}))
+
  function App() {
    const classes = useStyles();
    const [gameVisibile, setGameVisible] = useState(false);
   return (
-    <div className={classes.fullViewPortContainer}>
-      {(gameVisibile)? <Game setGameVisible={setGameVisible} />: <Menu setGameVisible={setGameVisible} />}
-    </div>
+    <MuiThemeProvider theme = {theme}>
+      <div className={classes.fullViewPortContainer}>
+        {(gameVisibile)? <Game setGameVisible={setGameVisible} />: <Menu setGameVisible={setGameVisible} />}
+      </div>
+    </MuiThemeProvider>
   );
 }
 
