@@ -1,8 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import Score from '../Score'
 import {makeStyles, Button} from '@material-ui/core';
-import {createWorld, blockMap, updateWorld} from '../../utils/world';
+import {createWorld, blockMap, updateWorld, getCollisionHeight} from '../../utils/world';
 import Block from '../Block';
+import Plane from '../Plane';
+import {updatePosition} from '../../utils/listeners';
+
+
 
 const useStyles = makeStyles(() => ({
   top:{
@@ -26,33 +30,49 @@ const useStyles = makeStyles(() => ({
     zIndex: '-1',
     display: 'flex',
     justifyContent: 'space-evenly',
-    flexDirection: 'column',
+    flexDirection: 'row',
   },
-  row:{
+  column:{
     display:'flex',
-    flexDirection:'row',
-    height:'10%',
+    flexDirection:'column',
+    height:'100%',
     width:'100%'
   }
   
 }));
+const screenHeight = window.innerHeight;
 
 const Game = ({setGameVisible}) => {
   const classes = useStyles();
+  const [playerPostion, setPlayerPosition] = useState(screenHeight * 0.2); 
   const [score, setScore] = useState(0);
-  const interval = 500;
+  const [gameOver, setGameOver] = useState(false);
+  const interval = 125;
   const [world, setWorld] = useState(createWorld());
   useEffect(() => {
-    setInterval(() => {
-      setScore(score => score + 1);
-    }, interval);
+    if(!gameOver){
+      setInterval(() => {
+      setScore(score => score + 1)
+    }, interval);}
     return (()=> clearInterval(interval));
-  },[]);
-
+  },[gameOver]);
+  
   useEffect(() => {
     const newWorld = updateWorld(world);
     setWorld(newWorld);
+    
+    setPlayerPosition(playerPostion + 10);
   }, [score]);
+  const updatePosition = ({keyCode}) => { if(keyCode === 32){setPlayerPosition(playerPostion - 20)} }
+  
+  useEffect (() => {
+    if(playerPostion > getCollisionHeight(world)){
+      setGameOver(true);
+    }
+    window.addEventListener('keydown', updatePosition);
+    return () => window.removeEventListener('keydown', updatePosition);
+  },[playerPostion,world]);
+  
 
   return(
     <div>
@@ -63,9 +83,10 @@ const Game = ({setGameVisible}) => {
         <Score score ={score}/>
       </div>
       <div className={classes.world}>
-        {world.map((row) => 
-        <div className ={classes.row}>
-          {row.map((block) => <Block {...blockMap[block]}/>)}
+        <Plane position = {playerPostion} gameOver={gameOver} />
+        {world.map((column) => 
+        <div className ={classes.column}>
+          {column.map((block) => <Block {...blockMap[block]}/>)}
         </div>)}
       </div>
     </div>

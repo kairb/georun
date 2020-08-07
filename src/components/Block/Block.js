@@ -3,7 +3,7 @@ import {makeStyles, Button} from '@material-ui/core';
 
 const useStyles = makeStyles(({
   block:{
-    width:'10%',
+    width:'100%',
     height:'100%',
     display:'inline-block',
     backgroundColor:({color}) => color
