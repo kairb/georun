@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/georun/precache-manifest.b0bbbab2b850ace6367223adf6924a06.js"
+  "/georun/precache-manifest.edbb7808d45375d3eb50ce93466e3153.js"
 );
 
 self.addEventListener('message', (event) => {
