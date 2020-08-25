@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/georun/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/georun/static/js/main.fe3c26e8.chunk.js",
-    "main.js.map": "/georun/static/js/main.fe3c26e8.chunk.js.map",
+    "main.js": "/georun/static/js/main.81cfe2b1.chunk.js",
+    "main.js.map": "/georun/static/js/main.81cfe2b1.chunk.js.map",
     "runtime-main.js": "/georun/static/js/runtime-main.04f3aa9c.js",
     "runtime-main.js.map": "/georun/static/js/runtime-main.04f3aa9c.js.map",
-    "static/js/2.b47d84f8.chunk.js": "/georun/static/js/2.b47d84f8.chunk.js",
-    "static/js/2.b47d84f8.chunk.js.map": "/georun/static/js/2.b47d84f8.chunk.js.map",
+    "static/js/2.ca7a9b90.chunk.js": "/georun/static/js/2.ca7a9b90.chunk.js",
+    "static/js/2.ca7a9b90.chunk.js.map": "/georun/static/js/2.ca7a9b90.chunk.js.map",
     "index.html": "/georun/index.html",
-    "precache-manifest.edbb7808d45375d3eb50ce93466e3153.js": "/georun/precache-manifest.edbb7808d45375d3eb50ce93466e3153.js",
+    "precache-manifest.c8ef59dc32a908a40b226afc9aacabf0.js": "/georun/precache-manifest.c8ef59dc32a908a40b226afc9aacabf0.js",
     "service-worker.js": "/georun/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/georun/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.b47d84f8.chunk.js.LICENSE.txt": "/georun/static/js/2.b47d84f8.chunk.js.LICENSE.txt",
+    "static/js/2.ca7a9b90.chunk.js.LICENSE.txt": "/georun/static/js/2.ca7a9b90.chunk.js.LICENSE.txt",
     "static/media/Dead.png": "/georun/static/media/Dead.c36fe9be.png",
     "static/media/Fly.png": "/georun/static/media/Fly.1fcf41c7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.04f3aa9c.js",
-    "static/js/2.b47d84f8.chunk.js",
+    "static/js/2.ca7a9b90.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.fe3c26e8.chunk.js"
+    "static/js/main.81cfe2b1.chunk.js"
   ]
 }
