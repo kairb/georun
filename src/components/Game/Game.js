@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import Score from '../Score'
 import {makeStyles, Button} from '@material-ui/core';
 import {createWorld, blockMap, updateWorld, getCollisionHeight} from '../../utils/world';
 import Block from '../Block';
 import Plane from '../Plane';
 import {updatePosition} from '../../utils/listeners';
+import PopOverMenu from '../PopOverMenu'
 
 
 
@@ -51,19 +52,21 @@ const Game = ({setGameVisible}) => {
   const [world, setWorld] = useState(createWorld());
   useEffect(() => {
     if(!gameOver){
-      setInterval(() => {
+      setTimeout(() => {
       setScore(score => score + 1)
     }, interval);}
-    return (()=> clearInterval(interval));
-  },[gameOver]);
+    return (()=> clearTimeout(interval));
+  },[gameOver, score]);
   
   useEffect(() => {
     const newWorld = updateWorld(world);
     setWorld(newWorld);
-    
+
     setPlayerPosition(playerPostion + 10);
   }, [score]);
-  const updatePosition = ({keyCode}) => { if(keyCode === 32){setPlayerPosition(playerPostion - 20)} }
+
+  const updatePosition =useMemo( ()=> ({keyCode}) => {
+     if(keyCode === 32 && !gameOver){setPlayerPosition(playerPostion - 20)} },[gameOver, playerPostion]);
   
   useEffect (() => {
     if(playerPostion > getCollisionHeight(world)){
@@ -72,12 +75,25 @@ const Game = ({setGameVisible}) => {
     window.addEventListener('keydown', updatePosition);
     return () => window.removeEventListener('keydown', updatePosition);
   },[playerPostion,world]);
+
+
+
+  const restart = useCallback(() => {
+    setWorld(createWorld());
+    setScore(0);
+    setPlayerPosition(screenHeight * 0.2)
+    setGameOver(false);
+    console.log("restart")
+  },[]);
   
+  const exit = useCallback(() => {
+    setGameVisible(false)
+  },[]);
 
   return(
     <div>
       <div className={`${classes.top} ${classes.left}`}>
-        <Button color='primary' onClick={()=> setGameVisible(false)}>menu</Button>
+        <Button color='primary' onClick={exit}>menu</Button>
       </div>
       <div className={`${classes.top} ${classes.right}`}>
         <Score score ={score}/>
@@ -89,6 +105,8 @@ const Game = ({setGameVisible}) => {
           {column.map((block) => <Block {...blockMap[block]}/>)}
         </div>)}
       </div>
+
+      <PopOverMenu open={gameOver} score={score} restart={restart} exit={exit}/>
     </div>
     
   )
