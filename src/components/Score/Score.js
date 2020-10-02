@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles({
   score_inner:{
@@ -39,6 +40,10 @@ const Score = ({score}) => {
       </div>
     </div>
   );
+}
+
+Score.prototype = {
+  score: PropTypes.number.isRequired
 }
 
 export default Score;

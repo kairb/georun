@@ -9,9 +9,9 @@ import Dialog from '@material-ui/core/Dialog';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-const useStyles = makeStyles((theme)=>({
-  wrapper:{
-    padding: theme.spacing(12)
+const useStyles = makeStyles((theme) => ({
+  wrapper: {
+    padding: theme.spacing(12),
   },
   button: {
     margin: theme.spacing(1),
@@ -22,15 +22,19 @@ function PopOver(props) {
   const classes = useStyles();
   const { onClose, open, score, exit, restart } = props;
 
-  const handleClose = () => {
-  };
+  const handleClose = () => {};
 
   const handleListItemClick = (value) => {
     onClose(value);
   };
 
   return (
-    <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} classes={{paper:classes.wrapper}}>
+    <Dialog
+      onClose={handleClose}
+      aria-labelledby="simple-dialog-title"
+      open={open}
+      classes={{ paper: classes.wrapper }}
+    >
       <DialogTitle id="simple-dialog-title">Game Over</DialogTitle>
       <List>
         You scored {score}
@@ -39,19 +43,18 @@ function PopOver(props) {
             variant="contained"
             color="secondary"
             className={classes.button}
-            startIcon={<RefreshIcon/>}
+            startIcon={<RefreshIcon />}
             onClick={restart}
           >
             Restart
           </Button>
-
         </Box>
         <Box>
           <Button
             variant="contained"
             color="primary"
             className={classes.button}
-            startIcon={<ArrowBackIcon/>}
+            startIcon={<ArrowBackIcon />}
             onClick={exit}
           >
             Exit
@@ -67,17 +70,22 @@ PopOver.propTypes = {
   open: PropTypes.bool.isRequired,
   score: PropTypes.number.isRequired,
   exit: PropTypes.func.isRequired,
-  restart: PropTypes.func.isRequired
+  restart: PropTypes.func.isRequired,
 };
 
-export default function PopOverMenu({open, score, exit, restart}) {
-
+export default function PopOverMenu({ open, score, exit, restart }) {
   const handleClose = () => {
     // setOpen(false);
   };
 
   return (
-    <PopOver  open={open} score={score} onClose={handleClose} exit={exit} restart={restart} />
+    <PopOver
+      open={open}
+      score={score}
+      onClose={handleClose}
+      exit={exit}
+      restart={restart}
+    />
   );
 }
 
@@ -85,5 +93,5 @@ PopOverMenu.prototype = {
   open: PropTypes.bool.isRequired,
   score: PropTypes.number.isRequired,
   exit: PropTypes.func.isRequired,
-  restart: PropTypes.func.isRequired
+  restart: PropTypes.func.isRequired,
 };

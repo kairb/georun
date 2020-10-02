@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Plane component should render the alive plane when gameOver is false 1`] = `
+<img
+  alt="plane"
+  class="makeStyles-plane-1 makeStyles-plane-2"
+  src="Fly.png"
+/>
+`;

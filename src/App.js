@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Menu from './components/Menu';
 import Game from './components/Game';
 import { makeStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core';
+import theme from './utils/theme'
 
 const useStyles = makeStyles(() => ({
   fullViewPortContainer: {
@@ -15,13 +16,6 @@ const useStyles = makeStyles(() => ({
       
 }));
 
-
-const theme = createMuiTheme(() => ({
-  palette:{
-    primary:'green',
-    secondary:'white',
-  }
-}))
 
  function App() {
    const classes = useStyles();
