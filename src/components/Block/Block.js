@@ -6,12 +6,13 @@ const useStyles = makeStyles(({
     width:'100%',
     height:'100%',
     display:'inline-block',
-    backgroundColor:({color}) => color
+    backgroundSize: 'auto 100%',
+    backgroundImage:({image}) => `url(${image})`
   }
 }));
 
-const Block = ({color}) => {
-  const classes = useStyles({color});
+const Block = ({image}) => {
+  const classes = useStyles({image});
   
   return(
     <div className={classes.block}>
