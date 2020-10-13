@@ -14,8 +14,8 @@ export const createWorld = () => {
   //  |
   //  V
   const getInitialRow = () => {
-    return [0, 0, 0, 0, 0, 0, 0, 0, 0, "ground1"];
-  }
+    return [0, 0, 0, 0, 0, 0, 0, 0, 0, 'ground1'];
+  };
   return new Array(40).fill(getInitialRow(), 0, 40);
 };
 
@@ -34,9 +34,8 @@ export const blockMap = {
 };
 
 const getRandom = () => {
-  return Math.random() > 0.5 ? 1 : 0;
+  return Math.random() > 0.5 ? "ground5" : 0;
 };
-
 
 export const getCollisionHeight = (world) => {
   const height1 = getColumnWorldHeight(world[18]);
@@ -47,16 +46,16 @@ export const getCollisionHeight = (world) => {
 };
 
 const getColumnWorldHeight = (column) => {
-  return (column.join('').indexOf(1) / 10) * window.innerHeight;
+  return ((column.join('').indexOf('ground') - 1) / 10) * window.innerHeight;
 };
 
 const getNextBlock = (above, below, index) => {
   if (above !== 0) {
-    return "ground5";
+    return 'ground5';
   } else if (below === 0) {
     return 0;
   } else {
-    return getRandomGround();
+    return getRandom();
   }
 };
 
@@ -66,14 +65,18 @@ const getNextColumn = (column) => {
       if (index < 2) {
         return 0;
       } else if (index === 9) {
-        return "ground5";
+        return 'ground5';
       } else {
         return getNextBlock(column[index - 1], column[index + 1], index);
       }
     })
     .map((block, index, newWorld) => {
+      console.log(newWorld);
+      if (!newWorld[index - 1] && newWorld[index] && !newWorld[index-2]) {
+        return getRandomGround();
+      }
       if (newWorld[index - 1] && newWorld[index + 1]) {
-        return "ground5";
+        return 'ground5';
       }
       return block;
     });

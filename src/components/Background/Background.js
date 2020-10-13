@@ -30,7 +30,6 @@ const useStyles = makeStyles({
 });
 
 const Background = ({stage, moveCount}) => {
-  console.log(backgroundStageMatrix[stage],stage)
   const styles = useStyles({ stage, moveCount });
   return <Box className={styles.background}></Box>;
 };
