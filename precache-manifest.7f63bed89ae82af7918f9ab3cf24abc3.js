@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6c93608a5432ac0dbf7282b0cc64aeb",
+    "revision": "21bb67887e4fd159313940ae1164eaa5",
     "url": "/georun/index.html"
   },
   {
-    "revision": "3b3df8710fa92609ff68",
+    "revision": "2206386a3af17345b01d",
     "url": "/georun/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "e2caf1d45b64baf47892",
-    "url": "/georun/static/js/2.ca7a9b90.chunk.js"
+    "revision": "94da7eedcc07c8d4e15b",
+    "url": "/georun/static/js/2.7d8c2998.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/georun/static/js/2.ca7a9b90.chunk.js.LICENSE.txt"
+    "url": "/georun/static/js/2.7d8c2998.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3b3df8710fa92609ff68",
-    "url": "/georun/static/js/main.81cfe2b1.chunk.js"
+    "revision": "2206386a3af17345b01d",
+    "url": "/georun/static/js/main.a86f59bd.chunk.js"
   },
   {
     "revision": "ad249671636adba3ba9d",
@@ -30,5 +30,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1fcf41c786be2547af0d02e9b32cfddb",
     "url": "/georun/static/media/Fly.1fcf41c7.png"
+  },
+  {
+    "revision": "552941c58ccaa9782ebee6496e77e003",
+    "url": "/georun/static/media/plx-5.552941c5.png"
   }
 ]);
